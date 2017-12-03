@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessManager.cs" />
+    <Compile Include="PersonelDTO\PersonelDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,10 +56,15 @@
       <Project>{dbae229e-e9e1-4818-8901-599ec6d8509c}</Project>
       <Name>IKProjesi.ENT</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IKProjesi.REP\IKProjesi.REP.csproj">
+      <Project>{37E0AFEE-47BE-4C42-A700-C4BE92F4000C}</Project>
+      <Name>IKProjesi.REP</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

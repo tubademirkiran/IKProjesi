@@ -1,0 +1,43 @@
+﻿@model IKProjesi.UI.Models.View.IlModel
+
+@{
+    ViewBag.Title = "Il";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2 style="text-align:center">İl</h2>
+<p></p>
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Ekle")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.il.IlAd)
+        </th>
+        <th>Güncelle</th>
+        <th>Detay</th>
+        <th>Sil</th>
+    </tr>
+
+    @foreach (var item in Model.list)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IlAd)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Guncelle", new { id = item.IlId })
+            </td>
+            <td>
+                @Html.ActionLink("Detay", "Detay", new { id = item.IlId })
+            </td>
+            <td>
+                @Html.ActionLink("Sil", "Sil", new { id = item.IlId })
+            </td>
+        </tr>
+    }
+
+</table>
+
+

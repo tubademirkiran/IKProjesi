@@ -1,0 +1,29 @@
+﻿@model IKProjesi.UI.Models.View.UnvanModel
+
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2 style="text-align:center">Detay</h2>
+<p></p>
+<div>
+    <h4>Unvan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.unvan.Ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unvan.Ad)
+        </dd>
+
+    </dl>
+</div>
+<p></p>
+<p>
+    @Html.ActionLink("Listeye Geri Dön", "Unvan")
+</p>
+
+

@@ -24,11 +24,12 @@ namespace IKProjesi.BL
                     IlId=x.Ilce.IlId
                 }).ToList();
             }
-            public class UnvanManager : UnvanRepositories { }
-            public class EgitimManager : EgitimRepositories { }
-            public class IlManager : IlRepositories { }
-            public class BolumManager : BolumRepositories { }
-            public class IlceManager : IlceRepositories { }
+           
         }
+        public class UnvanManager : UnvanRepositories { }
+        public class EgitimManager : EgitimRepositories { }
+        public class IlManager : IlRepositories { }
+        public class BolumManager : BolumRepositories { }
+        public class IlceManager : IlceRepositories { }
     }
 }
