@@ -1,0 +1,142 @@
+﻿@model IKProjesi.UI.Models.View.PersonelModel
+
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2 style="text-align:center">Güncelle</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.PersonelAd, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.personel.PersonelAd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.personel.PersonelAd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.PersonelSoyad, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.personel.PersonelSoyad, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.personel.PersonelSoyad, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.Bolum.Ad, "Bölüm", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.personel.BolumId, Model.BolumForDropdown)
+                @Html.ValidationMessageFor(model => model.personel.BolumId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.Egitim.Ad, "Egitim", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.personel.EgitimId, Model.EgitimDropdown)
+                @Html.ValidationMessageFor(model => model.personel.EgitimId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.Unvan.Ad, "Unvan", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.personel.UnvanId, Model.UnvanForDropdown)
+                @Html.ValidationMessageFor(model => model.personel.UnvanId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.Ilce.Il.IlAd, "İl", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.personel.Ilce.IlId, Model.IlForDropdown, htmlAttributes: new { id = "ddl_iller" })
+                @Html.ValidationMessageFor(model => model.personel.Ilce.IlId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.Ilce.Ad, "İlçe", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.personel.IlceId, Model.IlceForDropdown, htmlAttributes: new { id = "ddl_ilceler" })
+                @Html.ValidationMessageFor(model => model.personel.IlceId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.Telno, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.personel.Telno, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.personel.Telno, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.personel.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.personel.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.Maas, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.personel.Maas, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.personel.Maas, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.DogumTarihi, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.personel.DogumTarihi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.personel.DogumTarihi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.personel.Yonetici.PersonelAd, "Yönetici", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.personel.YoneticiId, Model.YoneticiForDropDown, " Yönetici Seç")
+                @Html.ValidationMessageFor(model => model.personel.YoneticiId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div>
+            @Html.LabelFor(model => model.personel.Yoneticimi, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(model => model.personel.Yoneticimi, "Evet")
+            </div>
+            <p></p>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Güncelle" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<p></p>
+<div>
+    @Html.ActionLink("Listeye Geri Dön", "Personel")
+</div>
+<script>
+    var url = "/Personel/TarihAl";
+    $.get(url, null, function (data) {
+        $("#tarih").html(data);
+    });
+    $(function () {
+        $("#ddl_iller").change(function () {//ill change
+            var il_id = $(this).val();
+
+            var uri = "/Personel/GetIlceler/" + il_id;
+            $("#ddl_ilceler").load(uri);
+        });
+
+        var il_id = $("#ddl_iller").val();//form load
+        var uri = "/Personel/GetIlceler/" + il_id;
+        $("#ddl_ilceler").load(uri);
+    });
+
+</script>
+
+

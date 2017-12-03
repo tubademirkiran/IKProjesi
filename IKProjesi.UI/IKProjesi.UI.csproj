@@ -150,6 +150,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IlceController.cs" />
     <Compile Include="Controllers\IlController.cs" />
+    <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\UnvanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -158,6 +159,7 @@
     <Compile Include="Models\View\EgitimModel.cs" />
     <Compile Include="Models\View\IlceModel.cs" />
     <Compile Include="Models\View\IlModel.cs" />
+    <Compile Include="Models\View\PersonelModel.cs" />
     <Compile Include="Models\View\UnvanModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -198,6 +200,10 @@
     <Content Include="Views\Ilce\Guncelle.cshtml" />
     <Content Include="Views\Ilce\Detay.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Personel\Personel.cshtml" />
+    <Content Include="Views\Personel\Ekle.cshtml" />
+    <Content Include="Views\Personel\Guncelle.cshtml" />
+    <Content Include="Views\Personel\Detay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

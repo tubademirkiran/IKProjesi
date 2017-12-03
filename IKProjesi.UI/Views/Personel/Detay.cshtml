@@ -1,0 +1,56 @@
+﻿@model IKProjesi.UI.Models.View.PersonelModel
+
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Detay</h2>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.personel.PersonelAd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.personel.PersonelAd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.personel.PersonelSoyad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.personel.PersonelSoyad)
+        </dd>
+        <dt>
+           Unvan
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.personel.Unvan.Ad)
+        </dd>
+        <dt>
+            Bölüm
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.personel.Bolum.Ad)
+        </dd>
+        <dt>
+            Eğitim
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.personel.Egitim.Ad)
+        </dd>
+        <dt>
+            <b>Yönetici</b>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.personel.Yonetici.PersonelAd)
+            @Html.DisplayFor(model => model.personel.Yonetici.PersonelSoyad)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Güncelle", "Guncelle", new { id = Model.personel.PersonelId }) |
+    @Html.ActionLink("Listeye Geri Dön", "Personel")
+</p>
+
+
