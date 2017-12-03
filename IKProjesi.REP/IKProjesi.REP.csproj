@@ -40,10 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseRepository.cs" />
+    <Compile Include="DbSingleTone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IKProjesi.DL\IKProjesi.DL.csproj">
+      <Project>{596D1300-D79C-4FAF-94F5-7382F02A09B3}</Project>
+      <Name>IKProjesi.DL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IKProjesi.ENT\IKProjesi.ENT.csproj">
       <Project>{dbae229e-e9e1-4818-8901-599ec6d8509c}</Project>
       <Name>IKProjesi.ENT</Name>
